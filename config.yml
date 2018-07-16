@@ -8,18 +8,22 @@ steps:
     description: Explore your options for making the move to GitHub
     event: issues
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub
     event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+
   - title: Make the move
     description: Publish your project on GitHub
     event: push
     link: https://github.com/{{ user.username }}/{{ course.template.name }}
+
   - title: Prepare to collaborate
     description: Run a Community health check
     event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+
   - title: Project settings
     description: Learn about important settings for new repositories
     event: issues.closed
