@@ -60,7 +60,7 @@ steps:
           url: '%actions.new_issue.data.html_url%'
 
   - title: Public or private repository?
-    description: ___
+    description: Understand the difference between a public and private repository
     event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
     actions:
