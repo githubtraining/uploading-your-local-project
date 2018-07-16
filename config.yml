@@ -5,33 +5,73 @@ template:
   name: github-move
 before:
   - type: createIssue
-    title: Planning the move
+    title: Planning the Move to GitHub
     body: 01_make-a-plan.md
 steps:
   - title: Plan the move
     description: Explore your options for making the move to GitHub
-    event: issues
+    event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    actions:
+      - type: createIssue
+        title: Preparing the project for Git
+        body: 04_prepare.md
 
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub
-    event: issues.closed
+    event: push
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+      - type: getTree
+        action_id: tree
+      - type: gate
+        left: '%actions.tree.data.tree%'
+        operator: includes
+        right: name:.gitignore
+        else:
+          type: respond
+          issue: Preparing the project for Git
+          with: e_needs_gitignore.md
+      - type: createIssue
+        title: Uploading your project
+        body: 05_move-local.md
+        action_id: new_issue
+      - type: closeIssue
+        issue: Preparing the project for Git
+      - type: respond
+        with: 02_next.md
+        data:
+          issueURL: '%actions.new_issue.data.html_url%'
 
   - title: Make the move
     description: Publish your project on GitHub
     event: push
     link: https://github.com/{{ user.username }}/{{ course.template.name }}
+    actions:
+      - type: createIssue
+        action_id: new_issue
+        title: Public or private repository?
+        body: 07_confirm_visibility.md
+      - type: closeIssue
+        issue: Importing your project
+      - type: respond
+        with: 06_move-done-local.md
+        data:
+          url: '%actions.new_issue.data.html_url%'
 
-  - title: Prepare to collaborate
-    description: Run a Community health check
+  - title: Public or private repository?
+    description: ___
     event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
-
-  - title: Project settings
-    description: Learn about important settings for new repositories
-    event: issues.closed
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+      - type: createIssue
+        action_id: new_issue
+        title: A few parting words
+        body: 08_graceful-exit.md
+      - type: respond
+        with: 02_next.md
+        data:
+          issueURL: '%actions.new_issue.data.html_url%'
 tags:
   - Git
   - GitHub
