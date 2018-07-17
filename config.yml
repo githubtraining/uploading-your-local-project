@@ -1,14 +1,14 @@
 title: Uploading your local project to GitHub
-tagline: Everything you need to know about moving projects to GitHub
-description: You’re a migration away from pushing your projects further with a full suite of development tools and premier third-party apps on GitHub. This course helps you seamlessly move code to GitHub and sets you up to do more after you make the move.
+tagline: Everything you need to know about uploading your project to GitHub
+description: You’re an upload away from pushing your projects further with a full suite of development tools and premier third-party apps on GitHub. This course helps you seamlessly upload your code to GitHub and introduce you to exciting next steps to elevate your project.
 template:
-  name: github-move
+  name: github-upload
 before:
   - type: createIssue
-    title: Planning the Move to GitHub
+    title: Planning the upload to GitHub
     body: 01_make-a-plan.md
 steps:
-  - title: Plan the move
+  - title: Plan the upload
     description: Explore your options for making the move to GitHub
     event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
@@ -44,7 +44,7 @@ steps:
         data:
           issueURL: '%actions.new_issue.data.html_url%'
 
-  - title: Make the move
+  - title: Begin the upload
     description: Publish your project on GitHub
     event: push
     link: https://github.com/{{ user.username }}/{{ course.template.name }}
