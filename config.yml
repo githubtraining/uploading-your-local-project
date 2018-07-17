@@ -40,6 +40,7 @@ steps:
         issue: Preparing the project for Git
       - type: respond
         with: 02_next.md
+        issue: Preparing the project for Git
         data:
           issueURL: '%actions.new_issue.data.html_url%'
 
@@ -56,6 +57,7 @@ steps:
         issue: Importing your project
       - type: respond
         with: 06_move-done-local.md
+        issue: Importing your project
         data:
           url: '%actions.new_issue.data.html_url%'
 
