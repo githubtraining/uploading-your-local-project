@@ -36,7 +36,7 @@ I know some people like to get straight to the point while others like more info
   <hr>
 </details>
 
-### Where is your project today?
+### :keyboard: Activity: Where is your project today?
 
 Understanding where your project currently lives is the first step to uploading it onto GitHub. Choose the below drop-down that best fits your current situation.
 
@@ -105,6 +105,8 @@ Understanding where your project currently lives is the first step to uploading 
 
   <hr>
 </details>
+
+> Close this issue to signal you are finished with this step. I will open a new issue to show you how to optimize your repository for Git operations. :tada:
 
 For a printable version of the steps in this course, check out the [Quick Reference Guide]({{ host }}/public/{{ course.slug }}.pdf).
 
