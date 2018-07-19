@@ -14,8 +14,13 @@ steps:
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
     actions:
       - type: createIssue
+        action_id: new_issue
         title: Preparing the project for Git
         body: 04_prepare.md
+      - type: respond
+        with: 02_next.md
+        data:
+          issueURL: '%actions.new_issue.data.html_url%'
 
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub
