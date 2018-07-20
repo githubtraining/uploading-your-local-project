@@ -2,7 +2,7 @@
 
 Uploading your project to GitHub gives you the feature-rich tools and collaboration needed to elevate your project to the next level. Not to mention, it's also pretty exciting. If you're doing this for the first time, you have a few options when uploading your project to GitHub. This course will guide you through the necessary steps to upload a local project to be hosted on GitHub.
 
-I know some people like to get straight to the point while others like more information. For those who like more information, be sure to check out the drop-downs like these two :arrow_down:
+I know some people like to get straight to the point while others like more information. For those who like more information, be sure to check out the drop-downs like this one :arrow_down:
 
 <details>
   <summary>Why move to GitHub?</summary>
@@ -15,6 +15,23 @@ I know some people like to get straight to the point while others like more info
   - **Version control** — Everything on GitHub is stored in [Git](http://git-scm.com), the best version control system around. Version control allows you to experiment and make mistakes in code without messing up your final product.
   - **Keep your code in one place** — Whether you work on multiple computers or just want to get some important projects off your computer, GitHub is the perfect place to store your projects online.
   - **Collaboration** — Once your code is on GitHub, you can invite others to work on your code with you, share it with the world, or send a link to a friend to help you debug a problem.
+
+  <hr>
+</details>
+
+### Where is your project?
+
+Most users find it is easiest to upload a project that is already located on their local machine, so **the goal of this first step is to make a local copy of the repository.** First, let's make sure this course is going to give you the right steps:
+
+<details>
+  <summary>Is your project on another version control system, such as Mercurial, Subversion, or another Git platform?</summary>
+  <hr>
+
+  ### Moving your project from another version control system
+
+  If you are moving your project from another version control system, the steps are a bit different that uploading your project from your local machine. Because of this, we have a dedicated course for migrating your project to GitHub.
+
+  If you are moving your project from Mercurial, Subversion, or another Git platform, join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
 
   <hr>
 </details>
@@ -36,12 +53,29 @@ I know some people like to get straight to the point while others like more info
   <hr>
 </details>
 
-### :keyboard: Activity: Where is your project today?
+### :keyboard: Activity: Exporting your project
 
-Understanding where your project currently lives is the first step to uploading it onto GitHub. Choose the below drop-down that best fits your current situation.
+Choose the drop-down below that best fits your current situation or for a printable version of the steps in this course, check out the [Quick Reference Guide]({{ host }}/public/{{ course.slug }}.pdf).
 
 <details>
-  <summary>Your project is on another site not using version control, such as CodePen or Glitch</summary>
+  <summary>Your project is already on your local machine</summary>
+  <hr>
+
+  ### Your project is already on your local machine
+
+  :sparkles: Terrific! @{{ user.username}} since you already have the project locally, you are _almost_ ready to move it to GitHub.
+
+  To confirm: You have a project directory on your computer and you want to save it on GitHub.
+
+  - **If this is correct**, close this issue to signal you are finished with this step. I will open a new issue to show you how to optimize your repository for Git operations.  
+
+  - **If this is incorrect**, please use the next drop-down to learn how to export your project to your local machine or join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
+
+  <hr>
+</details>
+
+<details>
+  <summary>Your project is on a non-version controlled site, such as CodePen or Glitch</summary>
   <hr>
 
   ### General instructions
@@ -76,39 +110,9 @@ Understanding where your project currently lives is the first step to uploading 
   <hr>
 </details>
 
-<details>
-  <summary>Your project is on another version control system, such as Mercurial, Subversion, or another Git platform</summary>
-  <hr>
+### Ready to move on?
 
-  ### Moving your project from another version control system
-
-  If you are moving your project from another version control system, the steps are a bit different that uploading your project from your local machine. Because of this, we have a dedicated course for migrating your project to GitHub.
-
-  If you are moving your project from Mercurial, Subversion, or another Git platform, join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
-
-  <hr>
-</details>
-
-<details>
-  <summary>Your project is already on your local machine</summary>
-  <hr>
-
-  ### Your project is already on your local machine
-
-  :sparkles: Terrific! @{{ user.username}} since you already have the project locally, you are _almost_ ready to move it to GitHub.
-
-  To confirm: You have a project directory on your computer and you want to save it on GitHub.
-
-  - **If this is correct**, close this issue to signal you are finished with this step. I will open a new issue to show you how to optimize your repository for Git operations.  
-
-  - **If this is incorrect**, please export your project to your local machine or join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
-
-  <hr>
-</details>
-
-> Close this issue to signal you are finished with this step. I will open a new issue to show you how to optimize your repository for Git operations. :tada:
-
-For a printable version of the steps in this course, check out the [Quick Reference Guide]({{ host }}/public/{{ course.slug }}.pdf).
+**Close this issue to signal you are finished with this step.** I will open a new issue to show you how to optimize your repository for Git operations. :tada:
 
 <hr>
 <h3 align="center">Watch below for my response</h3>
