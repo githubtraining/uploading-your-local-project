@@ -49,20 +49,9 @@ steps:
         operator: includes
         right: path:.gitignore
         else:
-          - type: respond
-            issue: Uploading your project
-            with: e_needs_gitignore.md
-          - type: createIssue
-            action_id: new_issue
-            title: Public or private repository?
-            body: 07_confirm-visibility.md
-          - type: closeIssue
-            issue: Uploading your project
-          - type: respond
-            with: 06_move-done-local.md
-            issue: Uploading your project
-            data:
-              url: '%actions.new_issue.data.html_url%'
+          type: respond
+          issue: Uploading your project
+          with: e_needs_gitignore.md
       - type: createIssue
         action_id: new_issue
         title: Public or private repository?
