@@ -1,6 +1,6 @@
 ## Step 4: Private or Public?
 
-Right now, your repository is set to {{ visibility }}.
+Right now, your repository is set to {% if private %}private{% else %}public{% endif %}.
 
 You can change the visibility of a repository to Private or Public at any time in your repository's **Settings** tab, but there are some things you should know.
 
