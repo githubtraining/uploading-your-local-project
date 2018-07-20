@@ -1,4 +1,6 @@
-From private betas to the most important open source technologies of our time, GitHub is home to all kinds of projects. Developers count on our platform to take their projects to the next level with collaborative tools, uncompromised security, and premier third-party apps. But if you haven’t started your project on GitHub, uploading your project might feel overwhelming. This course helps you seamlessly upload your local project to GitHub and provide important next steps for managing your project and introduce community involvement. See a word you don't understand? We've included an emoji :book: next to some key terms. Click on it to see its definition.
+From private betas to the most important open source technologies of our time, GitHub is home to all kinds of projects. Developers count on our platform to take their projects to the next level with collaborative tools, uncompromised security, and premier third-party apps. 
+
+If you haven’t started your project on GitHub, uploading your project might feel overwhelming. This course helps you seamlessly upload your local project to GitHub and provides important next steps for managing your project and introducing community involvement. 
 
 In this course, you’ll learn how to:
 
