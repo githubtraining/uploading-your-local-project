@@ -59,9 +59,9 @@ steps:
         issue: Uploading your project
       - type: respond
         with: 06_move-done-local.md
-        issue: Public or private repository?
+        issue: Uploading your project
         data:
-          issueURL: '%actions.new_issue.data.html_url%'
+          URL: '%actions.new_issue.data.html_url%'
 
   - title: Public or private repository?
     description: Understand the difference between a public and private repository
