@@ -17,4 +17,6 @@ Licenses, code of conduct, and other files are important when you create a publi
 > It's important to note that public does **not** equal open source! The license associated with code determines whether or not it is open source.
 
 <hr>
-<h3 align="center">I won't respond to this issue, just close it when you are done!</h3>
+<h3 align="center">Watch below for my response!</h3>
+
+:robot: I'm waiting for you to close this issue.
