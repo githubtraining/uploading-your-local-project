@@ -18,3 +18,6 @@ Before I say good-bye, I want to recap all the tasks you've accomplished. You:
 Now that you've moved your Git repository to GitHub, managing your repository is the next step you'll probably want to take. Join the [Community Starter Kit]({{ host }}/courses/community-starter-kit) course to learn how to invite collaborators, setup integrations, add documentation, and define several important settings and features.
 
 There's so much more you can do with GitHub, and you have a solid start. Now...[what will you learn next]({{ host }}/courses)?
+
+<hr>
+<h3 align="center">I won't respond to this issue, just close it when you are done!</h3>
