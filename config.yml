@@ -24,8 +24,22 @@ steps:
 
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub
-    event: push
+    event: issues.closed
     link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    actions:
+      - type: createIssue
+        title: Uploading your project
+        body: 05_move-local.md
+        action_id: new_issue
+      - type: respond
+        with: 02_next.md
+        data:
+          issueURL: '%actions.new_issue.data.html_url%'
+
+  - title: Begin the upload
+    description: Publish your project on GitHub
+    event: push
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}
     actions:
       - type: getTree
         action_id: tree
@@ -35,31 +49,14 @@ steps:
         right: path:.gitignore
         else:
           type: respond
-          issue: Preparing the project for Git
+          issue: Uploading your project
           with: e_needs_gitignore.md
-      - type: createIssue
-        title: Uploading your project
-        body: 05_move-local.md
-        action_id: new_issue
-      - type: closeIssue
-        issue: Preparing the project for Git
-      - type: respond
-        with: 02_next.md
-        issue: Preparing the project for Git
-        data:
-          issueURL: '%actions.new_issue.data.html_url%'
-
-  - title: Begin the upload
-    description: Publish your project on GitHub
-    event: push
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}
-    actions:
       - type: createIssue
         action_id: new_issue
         title: Public or private repository?
         body: 07_confirm_visibility.md
       - type: closeIssue
-        issue: Importing your project
+        issue: Uploading your project
       - type: respond
         with: 06_move-done-local.md
         issue: Importing your project
