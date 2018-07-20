@@ -2,10 +2,10 @@
 
 Right now, your repository is set to {{ visibility }}.
 
-You can change the visibility of a repository to Private <sup>[:book:](https://help.github.com/articles/github-glossary/#private-repository)</sup> or Public at any time, but there are some things you should know.
+You can change the visibility of a repository to Private or Public at any time in your repository's **Settings** tab, but there are some things you should know.
 
 ### Private Repositories
-If your repository is private, the only people who can see your code are the collaborators <sup>[:book:](https://help.github.com/articles/github-glossary/#collaborator)</sup> you've invited.
+If your repository is private, the only people who can see your code are you and the collaborators <sup>[:book:](https://help.github.com/articles/github-glossary/#collaborator)</sup> you've invited.
 
 There is a small charge associated with Private repositories, but if your project has sensitive information, it's worth it. 
 
