@@ -39,7 +39,7 @@ steps:
   - title: Begin the upload
     description: Publish your project on GitHub
     event: push
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}
+    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
     actions:
       - type: getTree
         action_id: tree
