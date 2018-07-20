@@ -44,6 +44,7 @@ steps:
       - type: getTree
         action_id: tree
       - type: gate
+        required: false
         left: '%actions.tree.data.tree%'
         operator: includes
         right: path:.gitignore
