@@ -14,7 +14,7 @@ Having a project already stored locally enables you to move it to GitHub rather 
   ### Using the command line
 
   1. In your command line, navigate to your project directory. Type `git init` to initialize the directory as a Git repository.
-  1. Type `git remote add origin {{url}}`
+  1. Type `git remote add origin https://github.com/{{ user.username}}/github-upload.git`
   1. Type `git add .`
   1. Type `git commit -m "initializing repository"`
   1. Type `git push -u origin master` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
