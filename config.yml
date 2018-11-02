@@ -3,6 +3,7 @@ tagline: Everything you need to know about uploading your project to GitHub
 description: You’re an upload away from using a full suite of development tools and premier third-party apps on GitHub. This course helps you seamlessly upload your code to GitHub and introduces you to exciting next steps to elevate your project.
 template:
   name: github-upload
+  repo: false
 before:
   - type: createIssue
     title: Planning the upload to GitHub
@@ -11,7 +12,7 @@ steps:
   - title: Plan the upload
     description: Explore your options for making the move to GitHub
     event: issues.closed
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: createIssue
         action_id: new_issue
@@ -25,7 +26,7 @@ steps:
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub
     event: issues.closed
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    link: '{{ repoUrl }}/issues'
     actions:
       - type: createIssue
         title: Uploading your project
@@ -39,7 +40,7 @@ steps:
   - title: Begin the upload
     description: Publish your project on GitHub
     event: push
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    link: '{{ repoUrl }}/issues'
     actions:
       - type: getTree
         action_id: tree
@@ -69,7 +70,7 @@ steps:
   - title: Public or private repository?
     description: Understand the difference between a public and private repository
     event: issues.closed
-    link: https://github.com/{{ user.username }}/{{ course.template.name }}/issues
+    link: '{{ repoUrl }}/issues'
     actions:
       - type: createIssue
         action_id: new_issue
@@ -82,5 +83,3 @@ steps:
 tags:
   - Git
   - GitHub
-
-order: 4
