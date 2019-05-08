@@ -14,10 +14,10 @@ Having a project already stored locally enables you to move it to GitHub rather 
   ### Using the command line
 
   1. In your command line, navigate to your project directory. Type `git init` to initialize the directory as a Git repository.
-  1. Type `git remote add origin https://github.com/{{ user.username}}/github-upload.git`
-  1. Type `git add .`
-  1. Type `git commit -m "initializing repository"`
-  1. Type `git push -u origin master` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
+  2. Type `git remote add origin {{ repoUrl }}.git`
+  3. Type `git add .`
+  4. Type `git commit -m "initializing repository"`
+  5. Type `git push -u origin master` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
 
   <hr>
 </details>
@@ -51,7 +51,7 @@ Having a project already stored locally enables you to move it to GitHub rather 
   1. In the box in the Source Control panel, type a commit message. Something like "initial commit - moving project" could work.
   1. Click the checkmark at the top of the Source Control panel.
   1. Open the integrated terminal found under View > Integrated Terminal.
-  1. In your command line, type `git remote add origin {{url}}`
+  1. In your command line, type `git remote add origin {{ repoUrl }}`
   1. In the Source Control Panel, click the expandable three dots that open a menu of options.
   1. When asked if you'd like to publish the branch, click **Okay**.
 
@@ -76,10 +76,10 @@ Having a project already stored locally enables you to move it to GitHub rather 
   1. Select **Commit**
   1. Close Atom
   1. In your command line, navigate to your project directory.
-  1. Type `git remote add origin {{url}}`
-  1. Return to Atom, and select the [Up/Down arrow icon](https://user-images.githubusercontent.com/13326548/36766999-34ff2bb2-1bed-11e8-90c6-3c97d0837244.png) at the bottom of your Git Tab
-  1. Click [Push](https://user-images.githubusercontent.com/13326548/36767211-5fd34ce6-1bee-11e8-964a-f49bed227c02.png), above the noted dialog.
-  1. Return to your repository, and note a successful push by finding your files on GitHub's code tab.
+  2. Type `git remote add origin {{ repoUrl }}`
+  3. Return to Atom, and select the [Up/Down arrow icon](https://user-images.githubusercontent.com/13326548/36766999-34ff2bb2-1bed-11e8-90c6-3c97d0837244.png) at the bottom of your Git Tab
+  4. Click [Push](https://user-images.githubusercontent.com/13326548/36767211-5fd34ce6-1bee-11e8-964a-f49bed227c02.png), above the noted dialog.
+  5. Return to your repository, and note a successful push by finding your files on GitHub's code tab.
 
   <hr>
 </details>
