@@ -4,7 +4,7 @@
 
 In general, there are two types of files: text files and binary files.
 
-Text files, like most code files, are easily tracked with Git <sup>[:book:](https://help.github.com/articles/github-glossary/#git)</sup> and are very lightweight.
+Text files, like most code files, are easily tracked with Git and are very lightweight.
 
 However, binary files like spreadsheets, presentations with slides, and videos don't work well with Git. If your repository already has some of these files, it's best to have a plan in place before you enable Git version control.
 
@@ -21,7 +21,7 @@ Since the files to be ignored are dependent on the language you are using, the o
 ### :keyboard: Activity: Prepare your repository
 
 1. Remove any binary files from your repository.
-1. In your local environment, [create a `.gitignore` file](https://help.github.com/articles/ignoring-files/). You can use a [template](https://github.com/github/gitignore) or create your own.
+2. In your local environment, [create a `.gitignore` file](https://help.github.com/articles/ignoring-files/). You can use a [template](https://github.com/github/gitignore) or create your own.
 
 > When you are finished, close this issue. I will open a new issue with the next steps. :tada:
 
