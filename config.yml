@@ -4,6 +4,9 @@ description: You’re an upload away from using a full suite of development tool
 template:
   name: github-upload
   repo: false
+tags:
+  - Git
+  - GitHub
 before:
   - type: createIssue
     title: Planning the upload to GitHub
@@ -80,6 +83,3 @@ steps:
         with: 02_next.md
         data:
           issueURL: '%actions.new_issue.data.html_url%'
-tags:
-  - Git
-  - GitHub
