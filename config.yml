@@ -4,11 +4,16 @@ description: You’re an upload away from using a full suite of development tool
 template:
   name: github-upload
   repo: false
+tags:
+  - Git
+  - GitHub
 before:
   - type: createIssue
     title: Planning the upload to GitHub
-    body: 01_make-a-plan.md
+    body: 00_make-a-plan.md
+    
 steps:
+  #1
   - title: Plan the upload
     description: Explore your options for making the move to GitHub.
     event: issues.closed
@@ -17,12 +22,13 @@ steps:
       - type: createIssue
         action_id: new_issue
         title: Preparing the project for Git
-        body: 04_prepare.md
+        body: 01_prepare.md
       - type: respond
-        with: 02_next.md
+        with: 01_next.md
         data:
           issueURL: '%actions.new_issue.data.html_url%'
 
+  #2
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub.
     event: issues.closed
@@ -30,13 +36,14 @@ steps:
     actions:
       - type: createIssue
         title: Uploading your project
-        body: 05_move-local.md
+        body: 02_move-local.md
         action_id: new_issue
       - type: respond
-        with: 02_next.md
+        with: 01_next.md
         data:
           issueURL: '%actions.new_issue.data.html_url%'
 
+  #3
   - title: Begin the upload
     description: Publish your project on GitHub.
     event: push
@@ -56,17 +63,17 @@ steps:
       - type: createIssue
         action_id: new_issue
         title: Public or private repository?
-        body: 07_confirm-visibility.md
+        body: 03_confirm-visibility.md
         data:
           private: '%payload.repository.private%'
       - type: closeIssue
         issue: Uploading your project
       - type: respond
-        with: 06_move-done-local.md
+        with: 03_move-done-local.md
         issue: Uploading your project
         data:
           issueURL: '%actions.new_issue.data.html_url%'
-
+  #4
   - title: Public or private repository?
     description: Understand the difference between a public and private repository.
     event: issues.closed
@@ -75,11 +82,8 @@ steps:
       - type: createIssue
         action_id: new_issue
         title: A few parting words
-        body: 08_graceful-exit.md
+        body: 04_graceful-exit.md
       - type: respond
-        with: 02_next.md
+        with: 01_next.md
         data:
           issueURL: '%actions.new_issue.data.html_url%'
-tags:
-  - Git
-  - GitHub
