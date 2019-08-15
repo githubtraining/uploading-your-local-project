@@ -31,7 +31,7 @@ Most users find it is easiest to upload a project that is already located on the
 
   If you are moving your project from another version control system, the steps are a bit different that uploading your project from your local machine. Because of this, we have a dedicated course for migrating your project to GitHub.
 
-  If you are moving your project from Mercurial, Subversion, or another Git platform, join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
+  If you are moving your project from Mercurial, Subversion, or another Git platform, join the [Migrating your project to GitHub]({{ host }}/courses/migrating-your-repository-to-github) course to migrate your project to GitHub.
 
   <hr>
 </details>
@@ -69,7 +69,7 @@ Choose the drop-down below that best fits your current situation or for a printa
 
   - **If this is correct**, close this issue to signal you are finished with this step. I will open a new issue to show you how to optimize your repository for Git operations.  
 
-  - **If this is incorrect**, please use the next drop-down to learn how to export your project to your local machine or join the [Migrating your project to GitHub]({{ host }}/courses/managing-your-github-repository) course to migrate your project to GitHub.
+  - **If this is incorrect**, please use the next drop-down to learn how to export your project to your local machine or join the [Migrating your project to GitHub]({{ host }}/courses/migrating-your-repository-to-github) course to migrate your project to GitHub.
 
   <hr>
 </details>
