@@ -2,6 +2,8 @@ From private betas to the most important open source technologies of our time, G
 
 If you haven’t started your project on GitHub, uploading your project might feel overwhelming. This course helps you seamlessly upload your local project to GitHub and provides important next steps for managing your project and introducing community involvement. 
 
+## What you'll learn
+
 In this course, you’ll learn how to:
 
 - Identify where your code is stored
