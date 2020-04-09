@@ -22,7 +22,6 @@ steps:
     link: '{{ store.first_issue_url }}'
     actions:
       - type: createIssue
-        action_id: new_issue
         title: Preparing the project for Git
         body: 01_prepare.md
         store: 
@@ -43,7 +42,6 @@ steps:
         body: 02_move-local.md
         store: 
           third_issue_url: '{{ results.data.html_url }}'
-        action_id: new_issue
       - type: respond
         with: 01_next.md
         data:
@@ -56,10 +54,11 @@ steps:
     link: '{{ store.third_issue_url }}'
     actions:
       - type: getTree
-        action_id: tree
+        store:
+          repo_tree: '{{ tree }}'
       - type: gate
         required: false
-        left: '%actions.tree.data.tree%'
+        left: '{{ store.repo_tree }}'
         operator: includes
         right: path:.gitignore
         else:
@@ -67,7 +66,6 @@ steps:
           issue: Uploading your project
           with: e_needs_gitignore.md
       - type: createIssue
-        action_id: new_issue
         title: Public or private repository?
         body: 03_confirm-visibility.md
         store:
@@ -88,7 +86,6 @@ steps:
     link: '{{ store.fourth_issue_url }}'
     actions:
       - type: createIssue
-        action_id: new_issue
         title: A few parting words
         body: 04_graceful-exit.md
         store:
