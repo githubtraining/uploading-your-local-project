@@ -54,11 +54,10 @@ steps:
     link: '{{ store.third_issue_url }}'
     actions:
       - type: getTree
-        store:
-          repo_tree: '{{ tree }}'
+        action_id: tree
       - type: gate
         required: false
-        left: '{{ store.repo_tree }}'
+        left: '{{ actions.tree.data.tree }}'
         operator: includes
         right: path:.gitignore
         else:
@@ -70,9 +69,8 @@ steps:
         body: 03_confirm-visibility.md
         store:
           fourth_issue_url: '{{ results.data.html_url }}'
-          repo_visibility: '{{ payload.repository.private }}'
         data:
-          private: '{{ store.repo_visibility }}'
+          private: '{{ payload.repository.private }}'
       - type: closeIssue
         issue: Uploading your project
       - type: respond
