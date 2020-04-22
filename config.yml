@@ -41,7 +41,7 @@ steps:
         title: Uploading your project
         body: 02_move-local.md
         store: 
-          third_issue_url: '{{ results.data.html_url }}'
+          third_issue_url: '{{ result.data.html_url }}'
       - type: respond
         with: 01_next.md
         data:
@@ -68,7 +68,7 @@ steps:
         title: Public or private repository?
         body: 03_confirm-visibility.md
         store:
-          fourth_issue_url: '{{ results.data.html_url }}'
+          fourth_issue_url: '{{ result.data.html_url }}'
         data:
           private: '{{ payload.repository.private }}'
       - type: closeIssue
@@ -88,7 +88,7 @@ steps:
         title: A few parting words
         body: 04_graceful-exit.md
         store:
-          fifth_issue_url: '{{ results.data.html_url }}'
+          fifth_issue_url: '{{ result.data.html_url }}'
       - type: respond
         with: 01_next.md
         data:
