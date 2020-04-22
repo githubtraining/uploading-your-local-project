@@ -42,6 +42,7 @@ steps:
         body: 02_move-local.md
         store: 
           third_issue_url: '{{ result.data.html_url }}'
+          third_issue_number: '{{ result.data.number }}'
       - type: respond
         with: 01_next.md
         data:
@@ -72,7 +73,8 @@ steps:
         data:
           private: '{{ payload.repository.private }}'
       - type: closeIssue
-        issue: Uploading your project
+        issue: '{{ store.third_issue_number }}'
+        required: false
       - type: respond
         with: 03_move-done-local.md
         issue: Uploading your project
