@@ -11,49 +11,54 @@ before:
   - type: createIssue
     title: Planning the upload to GitHub
     body: 00_make-a-plan.md
+    store:
+      first_issue_url: '{{ result.data.html_url }}'
     
 steps:
   #1
   - title: Plan the upload
     description: Explore your options for making the move to GitHub.
     event: issues.closed
-    link: '{{ repoUrl }}/issues/1'
+    link: '{{ store.first_issue_url }}'
     actions:
       - type: createIssue
-        action_id: new_issue
         title: Preparing the project for Git
         body: 01_prepare.md
+        store: 
+          second_issue_url: '{{ result.data.html_url }}'
       - type: respond
         with: 01_next.md
         data:
-          issueURL: '%actions.new_issue.data.html_url%'
+          issueURL: '{{ store.second_issue_url }}'
 
   #2
   - title: Prepare the project
     description: Prepare your project for a happy life on GitHub.
     event: issues.closed
-    link: '{{ repoUrl }}/issues'
+    link: '{{ store.second_issue_url }}'
     actions:
       - type: createIssue
         title: Uploading your project
         body: 02_move-local.md
-        action_id: new_issue
+        store: 
+          third_issue_url: '{{ result.data.html_url }}'
+          third_issue_number: '{{ result.data.number }}'
       - type: respond
         with: 01_next.md
         data:
-          issueURL: '%actions.new_issue.data.html_url%'
+          issueURL: '{{ store.third_issue_url }}'
 
   #3
   - title: Begin the upload
     description: Publish your project on GitHub.
     event: push
-    link: '{{ repoUrl }}/issues'
+    link: '{{ store.third_issue_url }}'
     actions:
       - type: getTree
         action_id: tree
       - type: gate
         required: false
-        left: '%actions.tree.data.tree%'
+        left: '{{ actions.tree.data.tree }}'
         operator: includes
         right: path:.gitignore
         else:
@@ -61,29 +66,32 @@ steps:
           issue: Uploading your project
           with: e_needs_gitignore.md
       - type: createIssue
-        action_id: new_issue
         title: Public or private repository?
         body: 03_confirm-visibility.md
+        store:
+          fourth_issue_url: '{{ result.data.html_url }}'
         data:
-          private: '%payload.repository.private%'
+          private: '{{ payload.repository.private }}'
       - type: closeIssue
-        issue: Uploading your project
+        issue: '{{ store.third_issue_number }}'
+        required: false
       - type: respond
         with: 03_move-done-local.md
         issue: Uploading your project
         data:
-          issueURL: '%actions.new_issue.data.html_url%'
+          issueURL: '{{ store.fourth_issue_url }}'
   #4
   - title: Public or private repository?
     description: Understand the difference between a public and private repository.
     event: issues.closed
-    link: '{{ repoUrl }}/issues'
+    link: '{{ store.fourth_issue_url }}'
     actions:
       - type: createIssue
-        action_id: new_issue
         title: A few parting words
         body: 04_graceful-exit.md
+        store:
+          fifth_issue_url: '{{ result.data.html_url }}'
       - type: respond
         with: 01_next.md
         data:
-          issueURL: '%actions.new_issue.data.html_url%'
+          issueURL: '{{ store.fifth_issue_url }}'
