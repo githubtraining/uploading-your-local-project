@@ -55,7 +55,7 @@ Most users find it is easiest to upload a project that is already located on the
 
 ### :keyboard: Activity: Exporting your project
 
-Choose the drop-down below that best fits your current situation or for a printable version of the steps in this course, check out the [Quick Reference Guide]({{ host }}/public/{{ course.slug }}.pdf).
+Choose the drop-down below that best fits your current situation.
 
 <details>
   <summary>Your project is already on your local machine</summary>
@@ -93,8 +93,8 @@ Choose the drop-down below that best fits your current situation or for a printa
   From the main page of your CodePen project:
 
   1. Click the **Export** button in the bottom right corner
-  1. Save the exported .zip file in your local directory
-  1. Extract the .zip file
+  2. Save the exported .zip file in your local directory
+  3. Extract the .zip file
 
   #### Exporting from Glitch
 
