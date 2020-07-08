@@ -17,7 +17,7 @@ Having a project already stored locally enables you to move it to GitHub rather 
   2. Type `git remote add origin {{ repoUrl }}.git`
   3. Type `git add .`
   4. Type `git commit -m "initializing repository"`
-  5. Type `git push -u origin master` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
+  5. Type `git push -u origin main` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
 
   **Note:** You can also use a password protected SSH key to connect to GitHub. See [Connecting to Githug with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) in our documentation to learn more.
 
