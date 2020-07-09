@@ -30,10 +30,14 @@ Having a project already stored locally enables you to move it to GitHub rather 
 
   ### Using GitHub Desktop
 
-  1. In GitHub Desktop, add a local repository by clicking `File > Add a Local Repository`, and then navigating to your local repository.
-  2. Create your first commit by typing a summary commit message in the field provided and clicking **Commit to master**
-  3. Add the remote by clicking `Repository > Repository Settings...` and pasting the URL from your repository on GitHub into the "Primary remote repository (origin)" field. Click **Save**.
-  4. Click **Publish** in the top right corner to push your repository to GitHub.
+GitHub Desktop doesn't allow you to add a new remote for an existing directory, so instead we'll copy the contents of your existing folder to our repo. If you'd like to keep your existing folder, you may want to use the command line or one of the other tools.
+
+  1. In GitHub Desktop, click on **File** and **Clone a repository**.
+  2. Click on the **URL** tab.
+  3. Paste the URL from this repository.
+  4. Move the contents of your local repository to this directory.
+  5. Create a commit by entering a commit message and then clicking on **Commit to main**
+  6. Click **Publish branch** in the top right corner to push your repository to GitHub.
 
   <hr>
 </details>
