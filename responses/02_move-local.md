@@ -17,7 +17,7 @@ Having a project already stored locally enables you to move it to GitHub rather 
   2. Type `git remote add origin {{ repoUrl }}.git`
   3. Type `git add .`
   4. Type `git commit -m "initializing repository"`
-  5. Type `git push -u origin master` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
+  5. Type `git push -u origin main` to push the files you have locally to the remote on GitHub. (You may be asked to log in.)
 
   **Note:** You can also use a password protected SSH key to connect to GitHub. See [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) in our documentation to learn more.
 
@@ -30,10 +30,14 @@ Having a project already stored locally enables you to move it to GitHub rather 
 
   ### Using GitHub Desktop
 
-  1. In GitHub Desktop, add a local repository by clicking `File > Add a Local Repository`, and then navigating to your local repository.
-  2. Create your first commit by typing a summary commit message in the field provided and clicking **Commit to master**
-  3. Add the remote by clicking `Repository > Repository Settings...` and pasting the URL from your repository on GitHub into the "Primary remote repository (origin)" field. Click **Save**.
-  4. Click **Publish** in the top right corner to push your repository to GitHub.
+GitHub Desktop doesn't allow you to add a new remote for an existing directory, so instead we'll copy the contents of your existing folder to our repo. If you'd like to keep your existing folder, you may want to use the command line or one of the other tools.
+
+  1. In GitHub Desktop, click on **File** and **Clone a repository**.
+  2. Click on the **URL** tab.
+  3. Paste the URL from this repository.
+  4. Move the contents of your local repository to this directory.
+  5. Create a commit by entering a commit message and then clicking on **Commit to main**
+  6. Click **Publish branch** in the top right corner to push your repository to GitHub.
 
   <hr>
 </details>
@@ -97,7 +101,7 @@ Having a project already stored locally enables you to move it to GitHub rather 
   3. Display the **Git Repositories** window by selecting Window > Show View > Other > Git > Git Repositories.
   3. Click the **Create a Git Repository** button on the Git Repositories pane.
   4. Make changes to your project and create a commit.
-  5. Push the master branch.
+  5. Push the changes to your default branch.
   5. When asked for a remote, paste the URL you copied earlier.
   6. Click next, and enter the branch name.
 
