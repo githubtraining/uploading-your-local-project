@@ -13,7 +13,7 @@ In this course, you’ll learn how to:
 
 You'll know the answers to questions like:
 
-- How to I move my existing project to GitHub?
+- How do I move my existing project to GitHub?
 - How do I add version control to my project?
 - How do I enable collaboration with others?
 
